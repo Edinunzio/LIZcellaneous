@@ -22,7 +22,7 @@ BEGIN -- this and END are used to group statements into a logical block.
 					REPLACE(
 						REPLACE(plg.LocationBreadcrumb, N'&', 'and'),
 						N'  ', N' '),
-					N' ', N'-')),
+					N' ', N'-')), -- this looks like it removes white space and replaces with a '-' and is also swaps out '&' with 'and'
 			LocationFolderId = plg.FolderId,
 			ProductId = pa.ProductId,
 			p.ProductDescription
