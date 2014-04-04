@@ -1,0 +1,46 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+
+
+
+SELECT [BaseFileId]
+      
+  FROM [cts_data_40_davidyurman].[dbo].[BaseFile] WHERE CustomAttributeGroupId = 'AFF354CA-4A15-41C6-8792-0FFBB57F5149'
+
+  SELECT TOP 1000 [AttributeGroupId]
+      ,[Name]
+      ,[Type]
+      ,[DateCreated]
+      ,[DateModified]
+  FROM [cts_data_40_davidyurman].[dbo].[AttributeGroup] WHERE AttributeGroupId = 'AFF354CA-4A15-41C6-8792-0FFBB57F5149'
+
+
+  SELECT TOP 1000 [BaseFileId]
+      ,[CutlineCutline]
+      ,[CutlineDescription]
+      ,[CutlineName]
+      ,[AlternateShipToCharge]
+      ,[CatalogId]
+      ,[CatalogItem]
+      ,[ChartId]
+      ,[CmosClass]
+      ,[MerchandisingType]
+      ,[Name]
+      ,[NMExclusiveFlag]
+      ,[ParentheticalAmount]
+      ,[ParentheticalFlag]
+      ,[Price]
+      ,[RestrictedStateCode]
+      ,[ServiceLevelCode]
+      ,[ShipMethodCode]
+      ,[ShowcaseFlag]
+      ,[SpecialInstructionFlag]
+      ,[TaxwareCategory]
+      ,[UniqueCode]
+      ,[VendorName]
+      ,[HasMoreColors]
+      ,[HasImage]
+      ,[IsBackOrder]
+      ,[IsAvailable]
+      ,[LastAvailable]
+      ,[LastModified]
+  FROM [cts_data_40_davidyurman].[dbo].[Products] WHERE isAvailable = '1'
